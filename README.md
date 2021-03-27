@@ -24,6 +24,8 @@ https://user-images.githubusercontent.com/77523551/112704520-436c7f80-8ede-11eb-
 
 # 사용법
 
+※ 해당 파일에는 카카오 API 인증키가 없습니다. 사용시 Web Content 내 kakaoApi.jsp에 인증키를 입력 후 사용해주세요.
+
 1. ID 입력(한번 정해진 ID는 브라우저 변경이 없는 한 유지)
 2. 번역 대상 언어 설정
 3. 메시지 입력 후 보내기
