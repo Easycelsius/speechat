@@ -3,6 +3,8 @@ Automatic translation chat program with KAKAO API
 
 본 프로젝트는 웹 소켓과 카카오 API를 활용한 자동번역 채팅프로그램 제작에 관한 프로젝트입니다. 언어 장벽을 극복한 대화를 추구합니다.
 
+![pj32](https://user-images.githubusercontent.com/77523551/112705913-2e92ea80-8ee4-11eb-98eb-e5940101cb6c.png)
+
 ---------------------------------------
 
 # 소개
