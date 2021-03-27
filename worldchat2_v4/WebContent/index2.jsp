@@ -165,10 +165,12 @@
 			  return;
 		  }
 
+	      transContent(message.value).then(final_msg => {
 	    	// 콘솔 텍스트에 메시지를 출력한다.	
-	      messageTextArea.value += user.value + "(me) : " + message.value + "\n";
+	    	  messageTextArea.value += user.value + "(me) : " + final_msg + "\n";
 	    	// WebSocket 서버에 메시지를 전송(형식 「{{유저명}}메시지」)	
-		  webSocket.send("{{" + user.value + "}}" + message.value);	
+		      webSocket.send("{{" + user.value + "}}" + final_msg);	
+	      })
 	      
 	      // 스크롤바 이동
 	      move_scroll();
@@ -180,15 +182,9 @@
 	 	
 	  	/// WebSocket 서버로 부터 메시지가 오면 호출되는 함수	
 	    webSocket.onmessage = function(message) {	
-	  		
-	  		console.log(message.data);
 	      // 콘솔 텍스트에 메시지를 출력한다.	
-	      transContent(message.data).then(final_msg => {
-	      	// messageTextArea.value += message.data + "\n";
-	      	messageTextArea.value += final_msg + "\n";
-	      });
-	      
-	      move_scroll();
+	      messageTextArea.value += message.data + "\n";
+	      move_scroll()
 	      recive_message_sound();
 	    };	
 	    
